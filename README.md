@@ -10,9 +10,6 @@ Readify Recs is an intelligent web-based book discovery and recommendation platf
 
 > **backend is running on 👉 http://127.0.0.1:5000/recommend**
 
-- 🏠 **Home Page**: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-- 📖 **About Page**: [http://127.0.0.1:5000/about](http://127.0.0.1:5000/about)
-- 🔍 **AI Recommendation Engine**: [http://127.0.0.1:5000/recommend](http://127.0.0.1:5000/recommend)
 
 ---
 
