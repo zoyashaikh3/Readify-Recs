@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf6f0;
+  /* Light beige */
+}
+
+header {
+  background-color: #fff0f5;
+  /* Light pink */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f3d1bf;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #d57276;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a,
+.logout-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #5e4b45;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+.logout-btn:hover {
+  background-color: #f3d1bf;
+}
+
+.logout-btn {
+  background-color: #d57276;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #d57276;
+  margin-bottom: 1.5rem;
+}
+
+.book-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.book {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3d1bf;
+}
+
+.book img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.book h3 {
+  color: #5e4b45;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

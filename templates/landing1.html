@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Readify - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6f0;
+      /* Light beige */
+    }
+
+    header {
+      background-color: #fff0f5;
+      /* Light pink */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #f3d1bf;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: #d57276;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a,
+    .logout-btn {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #5e4b45;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover,
+    .logout-btn:hover {
+      background-color: #f3d1bf;
+    }
+
+    .logout-btn {
+      background-color: #d57276;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d57276;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-list {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .book {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #f3d1bf;
+    }
+
+    .book img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+
+    .book h3 {
+      color: #5e4b45;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Readify Recs</div>
+    <nav>
+      <a href="#top-books">Home</a>
+      <a href="/about">About</a>
+      <a href="/recommend">Recommendations</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Amazon Top 10 Books -->
+    <section id="top-books">
+      <h1>Top 10 Amazon Book Recommendations</h1>
+      <div class="book-list">
+
+        <div class="book">
+          <img src="/static image/norwegian wood.jpg" alt="Norwegian Wood">
+          <h3>Norwegian Wood</h3>
+          <button onclick="toggleDetails(this)"
+            style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+            Learn More
+          </button>
+          <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+            <p><strong>Name:</strong>Norwegian Wood</p>
+            <p><strong>Author:</strong>Haruki Murakami</p>
+            <p><strong>Price:</strong>$4.24</p>
+            <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+                on Amazon</a></p>
+          </div>
+        </div>
+    
+        <div class="book">
+          <img src="/static image/atomic-habits-dots.png" alt="Atomic Habits">
+          <h3>Atomic Habits</h3>
+          <button onclick="toggleDetails(this)"
+            style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+            Learn More
+          </button>
+          <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+            <p><strong>Name:</strong>Atomic Habits</p>
+            <p><strong>Author:</strong>James Clear</p>
+            <p><strong>Price:</strong>$6.42</p>
+            <p><a href="https://www.amazon.in/Atomic-Habits-James-Clear/dp/1847941834/ref=sr_1_3?crid=2FTN7NPNPFWHI&dib=eyJ2IjoiMSJ9.xAoqssi61EZJQQ1VLeENK2OGZPVFZhwBYt4uERHvNuVrmv0qcTHhluj9a2vFfDhKt9rISNHHhheFD0lpYTKuA3iiMSmLTmrvXIQvgPpSS_hX44EG1m4ZWYTUlsDQyeb1dHwPzwUCkCBJ0GWtHdflYfjss5GTVGW-hvLRMNk9d0id_5odFIAC49hzwZQl8qsuDkeLpqhvbioBV4aCJd-x_vVSzvKvRxq1nHkKqCkAckw.nqZD5Rz3WB8I-hkZ5tuMuegXFT7EOr4yDO-AUe9EKRA&dib_tag=se&keywords=atomic+habits&qid=1742834750&sprefix=atomic+habits%2Caps%2C220&sr=8-3" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+                on Amazon</a></p>
+          
+          </div>
+       </div>
+       
+        <div class="book">
+          <img src="/static image/tokillamockingbird.jpg" alt="To kill a MockingBird">
+          <h3>To kill a MockingBird</h3>
+          <button onclick="toggleDetails(this)"
+            style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+            Learn More
+         </button>
+         <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+           <p><strong>Name:</strong>To Kill The Mocking Bird</p>
+           <p><strong>Author:</strong>Harper Lee</p>
+           <p><strong>Price:</strong>$3.74</p>
+           <p><a href="https://www.amazon.in/Kill-Mockingbird-Harper-Lee/dp/0099549484/ref=sr_1_1?crid=2LVFN3K0LFRM1&dib=eyJ2IjoiMSJ9.wQ-yj6CpoFFDdJsK-bnWZODd14nWyrB967R4gv40CMftuc9dJBAZ43SDZLDxJK0QsDAzByO5VIzsrlhQDSSyx6EuAEE3br2VLEi13EE1p-veIryD6cr3zBdEDVdderLuKPh8u2dYqWU1EHlKmqtdACpO4kvAMT7MSMBBzz3B9GFvOKSZAnmv1BJKvTwMqIXNKehtW5IN7B1ZXhFk8VXh_RIzKS2Qlo0RrT3JBMQgkwc.hvU1FlvdKqXiu_pkkpogzUobkR4iyxC0FBueuV0T6aI&dib_tag=se&keywords=to+kill+a+mockingbird+by+harper+lee&qid=1742834523&sprefix=to+kill+%2Caps%2C244&sr=8-1" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+               on Amazon</a></p>
+           </div>
+        </div>
+         
+        <div class="book">
+          <img src="/static image/thealchemist.jpg" alt="The Alchemists">
+          <h3>The Alchemists</h3>
+          <button onclick="toggleDetails(this)"
+          style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+          Learn More
+        </button>
+        <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+          <p><strong>Name:</strong>The Alchemist</p>
+          <p><strong>Author:</strong>Paulo Coelho</p>
+          <p><strong>Price:</strong>$3.02</p>
+          <p><a href="https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988/ref=sr_1_1_sspa?crid=19PYNU2OSU8HD&dib=eyJ2IjoiMSJ9.LYZEN1rlO8IWbRXmGQk6cBB3tSL2b-LqeIBr6hsDEEs86ZSXcjrW169CmYWlAboDdaeDc_w1bgkT4hQEkkxXilBWeVo6fvDHTPo-heEwYQiZOlPT_jDSzH5VE6W6h71DKWgS2bFzd6t4gNKhfFJQ9vi-1c39Pnm2afHcBCvOiTt3jF4o1lOkXa8x6394HLha8EpkiIz9kwTnLag6uVPc1VZkqCeFWpKA9-vKVzC6VnM.VGZb1_Hgdvr14C3hNHm1CHFPybZQoyicKM3W4L97tps&dib_tag=se&keywords=The+Alchemist&qid=1742834876&sprefix=the+alchemist%2Caps%2C214&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+              on Amazon</a></p>
+          </div>
+        </div>
+         
+        <div class="book">
+          <img src="/static image/pom.jpg" alt="Psychology of Money">
+          <h3>Psychology of Money</h3>
+          <button onclick="toggleDetails(this)"
+          style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+          Learn More
+        </button>
+        <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+          <p><strong>Name:</strong>Psychology Of Money</p>
+          <p><strong>Author:</strong>Morgan Hoesal</p>
+          <p><strong>Price:</strong>$2.81</p>
+          <p><a href="https://www.amazon.in/PSYCHOLOGY-MONEY-Stock-Readers-English/dp/B0DZP94Q3W/ref=sr_1_2_sspa?crid=215BUCBF4CYPM&dib=eyJ2IjoiMSJ9.DGQeo8g4q2yFKtsGlhZaFvl8Nt-ykXiZeSHi2JkcjDzlopWeduSOpf-VPO3vvjEYLMWgiet89wD7IZGEwp_iT7eB4bYN4PawyXGUrEBKdEkSuqXy9sMrAYX7L3dmOT0jIbKyqWLKX3sztsPKjnEn-hINltB0AburiZDfWN90w92ic6Mehq7KEWcQnUlq4W5G_D2utwCD2tYdoj0UAV6VvABdTyBzoVhk1jAowtf7r7k.OzgAj0HbPNKvKDp_WbF1w_FjKKbKne6r6fvah99zQJg&dib_tag=se&keywords=psychology+of+money+book&qid=1742835060&sprefix=psychology%2Caps%2C213&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+              on Amazon</a></p>
+          </div>
+        </div>
+         
+      <div class="book">
+        <img src="/static image/Rich_Dad_Poor_Dad.jpg" alt="Rich Dad Poor Dad">
+        <h3>Rich Dad Poor Dad</h3>
+        <button onclick="toggleDetails(this)"
+        style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+        Learn More
+      </button>
+      <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+        <p><strong>Name:</strong>Norwegian Wood</p>
+        <p><strong>Author:</strong>Haruki Murakami</p>
+        <p><strong>Price:</strong>$4.24</p>
+        <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+            on Amazon</a></p>
+        </div>
+      </div>
+         
+        <div class="book">
+          <img src="/static image/the-power-of-your-subconscious-mind-original-imafh5prd8zpmvsh.webp" alt="The Power of Your Subconcious Mind">
+          <h3>The Power of Your Subconcious Mind</h3>
+          <button onclick="toggleDetails(this)"
+        style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+        Learn More
+      </button>
+      <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+        <p><strong>Name:</strong>Norwegian Wood</p>
+        <p><strong>Author:</strong>Haruki Murakami</p>
+        <p><strong>Price:</strong>$4.24</p>
+        <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+            on Amazon</a></p>
+        </div>
+        </div>
+          
+        <div class="book">
+          <img src="/static image/sapiens.jpg" alt="Sapiens">
+          <h3>Sapiens</h3>
+          <button onclick="toggleDetails(this)"
+        style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+        Learn More
+      </button>
+      <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+        <p><strong>Name:</strong>Norwegian Wood</p>
+        <p><strong>Author:</strong>Haruki Murakami</p>
+        <p><strong>Price:</strong>$4.24</p>
+        <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+            on Amazon</a></p>
+        </div>
+        </div>
+          
+        <div class="book">
+          <img src="/static image/thinkandgrowrich.jpg" alt="Think and Grow Rich">
+          <h3>Think and Grow Rich</h3>
+          <button onclick="toggleDetails(this)"
+        style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+        Learn More
+      </button>
+      <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+        <p><strong>Name:</strong>Norwegian Wood</p>
+        <p><strong>Author:</strong>Haruki Murakami</p>
+        <p><strong>Price:</strong>$4.24</p>
+        <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+            on Amazon</a></p>
+        </div>
+        </div>
+          
+        <div class="book">
+          <img src="/static image/the-power-of-now-original-imafy8fazbbfgz42.webp" alt="The Power of Now">
+          <h3>The Power of Now</h3>
+          <button onclick="toggleDetails(this)"
+         style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #d57276; color: white; border: none; border-radius: 20px; cursor: pointer;">
+         Learn More
+      </button>
+      <div id="bookDetails" style="display: none; margin-top: 1rem; font-size: 0.9rem; color: #5e4b45;">
+        <p><strong>Name:</strong>Norwegian Wood</p>
+        <p><strong>Author:</strong>Haruki Murakami</p>
+        <p><strong>Price:</strong>$4.24</p>
+        <p><a href="https://www.amazon.in/Norwegian-Wood-Haruki-Murakami/dp/0099448823/ref=asc_df_0099448823/?tag=googleshopmob-21&linkCode=df0&hvadid=709855683990&hvpos=&hvnetw=g&hvrand=10094430769713841943&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9300687&hvtargid=pla-448425242395&psc=1&mcid=1731cd5ab77f3d618f15fa88bec9a072&gad_source=1&dplnkId=aa878f51-71ba-4e0c-8fbb-aeafc22da202" target="_blank" style="color: #d57276; text-decoration: none;">Buy
+            on Amazon</a></p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Sorting Recommendations -->
+    <section id="recommendations" style="margin-top: 4rem;">
+      <h1>Get Recommendations</h1>
+      <p>Sort by your favorite genre, author, or ratings.</p>
+    </section>
+  </main>
+  <script>
+    function toggleDetails(button) {
+      const detailBox = button.nextElementSibling;
+      if (detailBox.style.display === "none" || detailBox.style.display === "") {
+        detailBox.style.display = "block";
+      } else {
+        detailBox.style.display = "none";
+      }
+    }
+  </script>
+  
+
+</body>
+
+</html>
